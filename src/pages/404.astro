@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="404 - Page Not Found"
+  description="The page you're looking for doesn't exist."
+  currentPage="404"
+>
+  <div id="tt-content-wrap">
+    <div id="tt-page-content">
+      <div class="tt-section no-padding">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-404-error">
+            <h2 class="tt-404-error-subtitle">404 Error</h2>
+            <h1 class="tt-404-error-title">Oops!</h1>
+            <div class="tt-404-error-description">
+              The page you're looking for doesn't exist.<br /> While you're here,
+              remember: Good design communicates instantly.
+            </div>
+            <a
+              href="/"
+              class="tt-btn tt-btn-secondary margin-top-40 tt-magnetic-item"
+            >
+              <span data-hover="Back to Portfolio">Back to Portfolio</span>
+            </a>
+
+            <div class="margin-top-40">
+              <p class="text-lg margin-bottom-20">
+                Here are some helpful links:
+              </p>
+              <div class="tt-row">
+                <div class="tt-col-md-4 margin-bottom-20">
+                  <a
+                    href="/work"
+                    class="tt-btn tt-btn-outline tt-magnetic-item"
+                  >
+                    <span data-hover="View My Work">View My Work</span>
+                  </a>
+                </div>
+                <div class="tt-col-md-4 margin-bottom-20">
+                  <a
+                    href="/services"
+                    class="tt-btn tt-btn-outline tt-magnetic-item"
+                  >
+                    <span data-hover="Services">Services</span>
+                  </a>
+                </div>
+                <div class="tt-col-md-4 margin-bottom-20">
+                  <a
+                    href="/contact"
+                    class="tt-btn tt-btn-outline tt-magnetic-item"
+                  >
+                    <span data-hover="Contact Me">Contact Me</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="margin-top-40 padding-top-40 border-top">
+              <p class="text-lg italic text-muted">
+                "I design visuals that don't just look good — they work."
+                <span class="block margin-top-10 font-500"
+                  >— Mayank Raj</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="tt-scroll-to-top">
+      <div class="tt-stt-progress tt-magnetic-item">
+        <svg
+          class="tt-stt-progress-circle"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+      </div>
+    </a>
+  </div>
+</Layout>

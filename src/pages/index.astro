@@ -1,11 +1,975 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { seoData } from "../data/seoData.js";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const { meta_title, meta_description, current_page } = seoData.home;
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title={meta_title}
+  description={meta_description}
+  currentPage={current_page}
+>
+  <div id="tt-content-wrap">
+    <div
+      id="page-header"
+      class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax"
+    >
+      <div class="ph-video ph-video-grayscale ph-video-cover-1">
+        <div class="ph-video-inner">
+          <video
+            loop
+            muted
+            autoplay
+            playsinline
+            preload="metadata"
+            poster="assets/vids/1920/video-1-1920.jpg"
+          >
+            <source
+              src="assets/vids/placeholder.mp4"
+              data-src="assets/vids/1920/video-1-1920.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="assets/vids/placeholder.webm"
+              data-src="assets/vids/1920/video-1-1920.webm"
+              type="video/webm"
+            />
+          </video>
+        </div>
+      </div>
+
+      <div class="page-header-inner tt-wrap">
+        <div class="ph-caption">
+          <div class="ph-caption-inner">
+            <h1 class="ph-caption-title">Mayank<br /> Raj</h1>
+            <div class="ph-caption-description max-width-700">
+              Graphic Designer & Visual Brand Strategist<br />
+              I design visuals that don't just look good — they work.
+            </div>
+            <div class="margin-top-20">
+              <a
+                href="#tt-page-content"
+                class="tt-btn tt-btn-outline tt-magnetic-item"
+              >
+                <span data-hover="View My Work">View My Work</span>
+              </a>
+              <a
+                href="#contact"
+                class="tt-btn tt-btn-outline margin-left-20 tt-magnetic-item"
+              >
+                <span data-hover="Let's Work Together">Let's Work Together</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header-inner ph-mask">
+        <div class="ph-mask-inner tt-wrap">
+          <div class="ph-caption">
+            <div class="ph-caption-inner">
+              <h1 class="ph-caption-title">Mayank<br /> Raj</h1>
+              <div class="ph-caption-description max-width-700">
+                Graphic Designer & Visual Brand Strategist<br />
+                I design visuals that don't just look good — they work.
+              </div>
+              <div class="margin-top-20">
+                <a
+                  href="#tt-page-content"
+                  class="tt-btn tt-btn-outline tt-magnetic-item"
+                >
+                  <span data-hover="View My Work">View My Work</span>
+                </a>
+                <a
+                  href="#contact"
+                  class="tt-btn tt-btn-outline margin-left-20 tt-magnetic-item"
+                >
+                  <span data-hover="Let's Work Together"
+                    >Let's Work Together</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph-social">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com"
+              class="tt-magnetic-item"
+              target="_blank"
+              rel="noopener"><i class="fa-brands fa-facebook-f"></i></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://dribbble.com"
+              class="tt-magnetic-item"
+              target="_blank"
+              rel="noopener"><i class="fa-brands fa-dribbble"></i></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.behance.net"
+              class="tt-magnetic-item"
+              target="_blank"
+              rel="noopener"><i class="fa-brands fa-behance"></i></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/"
+              class="tt-magnetic-item"
+              target="_blank"
+              rel="noopener"><i class="fa-brands fa-youtube"></i></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="tt-scroll-down">
+        <a
+          href="#tt-page-content"
+          class="tt-scroll-down-inner tt-magnetic-item"
+          data-offset="0"
+        >
+          <div class="tt-scrd-icon"></div>
+          <svg viewBox="0 0 500 500">
+            <defs>
+              <path
+                d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                id="textcircle"></path>
+            </defs>
+            <text dy="30">
+              <textPath xlink:href="#textcircle"
+                >Scroll to Explore - Scroll to Explore -</textPath
+              >
+            </text>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="tt-page-content">
+      <div class="tt-section padding-top-xlg-140 padding-bottom-xlg-120">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row">
+            <div class="tt-col-lg-4">
+              <div class="tt-heading tt-heading-xlg">
+                <h2 class="tt-heading-title tt-text-reveal">About Me</h2>
+              </div>
+              <div class="tt-text-uppercase margin-top-30 tt-text-reveal">
+                5 years of experience<br /> in graphic design & branding
+              </div>
+            </div>
+            <div class="tt-col-lg-1 padding-top-30"></div>
+            <div class="tt-col-lg-7 tt-align-self-center">
+              <div class="text-xxlg font-500 tt-text-reveal">
+                I'm Mayank Raj, a professional graphic designer with a
+                sharp focus on branding, digital creatives, and visual
+                storytelling.
+              </div>
+              <div class="text-lg margin-top-30 tt-text-reveal">
+                I don't believe in decoration for the sake of design. Every
+                color, layout, and visual decision I make is driven by clarity,
+                purpose, and results. Over time, I've worked with local
+                businesses, professionals, startups, and service brands, helping
+                them present themselves confidently in a competitive market. If
+                you're looking for serious design that represents your brand
+                properly, not random templates — you're in the right place.
+              </div>
+              <a
+                href="/about"
+                class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item tt-anim-fadeinup"
+              >
+                <span data-hover="Read More">Read More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section padding-top-xlg-140 border-top">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row">
+            <div class="tt-col-xl-8">
+              <div class="tt-heading tt-heading-xxxlg">
+                <h3 class="tt-heading-subtitle tt-text-reveal">
+                  Selected Work
+                </h3>
+                <h2 class="tt-heading-title tt-text-reveal">Projects</h2>
+              </div>
+              <div
+                class="tt-text-uppercase max-width-400 margin-left-xlg-10-p text-pretty tt-text-reveal"
+              >
+                A curated collection of branding, social media creatives, and
+                promotional designs created for different industries
+              </div>
+            </div>
+            <div class="tt-col-xl-4 tt-align-self-end margin-top-30">
+              <div class="tt-big-round-ptn tt-anim-fadeinup">
+                <a
+                  href="/work"
+                  class="tt-big-round-ptn-holder tt-magnetic-item"
+                >
+                  <div class="tt-big-round-ptn-inner">All<br /> Projects</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tt-section no-padding-top padding-top-xlg-80 padding-bottom-20 padding-bottom-xlg-80"
+      >
+        <div class="tt-section-inner">
+          <div class="tt-portfolio-preview-list tt-ppli-portrait tt-ppli-hover">
+            <div class="tt-ppl-items-list">
+              <a href="/work/jewellery-brand" class="tt-ppl-item">
+                <div class="tt-ppli-preview">
+                  <div class="tt-ppli-preview-image">
+                    <img
+                      src="assets/img/portfolio/800/portfolio-1.png"
+                      alt="Jewellery Brand Design"
+                    />
+                  </div>
+                </div>
+                <div class="tt-ppl-item-inner">
+                  <div class="tt-ppl-item-holder">
+                    <div class="tt-ppli-col tt-ppli-col-count">
+                      <div class="tt-ppli-count"></div>
+                    </div>
+                    <div class="tt-ppli-col tt-ppli-col-caption">
+                      <div class="tt-ppli-caption">
+                        <h2 class="tt-ppli-title">Jewellery Brand</h2>
+                        <div class="tt-ppli-categories">
+                          <div class="tt-ppli-category">Jewellery</div>
+                          <div class="tt-ppli-category">Brand Identity</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
+                    >
+                      <div class="tt-ppli-info">
+                        Complete Brand Identity & Social Media
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="/work/healthcare-clinic" class="tt-ppl-item">
+                <div class="tt-ppli-preview">
+                  <div class="tt-ppli-preview-image">
+                    <img
+                      src="assets/img/portfolio/800/portfolio-2.png"
+                      alt="Healthcare Branding"
+                    />
+                  </div>
+                </div>
+                <div class="tt-ppl-item-inner">
+                  <div class="tt-ppl-item-holder">
+                    <div class="tt-ppli-col tt-ppli-col-count">
+                      <div class="tt-ppli-count"></div>
+                    </div>
+                    <div class="tt-ppli-col tt-ppli-col-caption">
+                      <div class="tt-ppli-caption">
+                        <h2 class="tt-ppli-title">Healthcare Clinic</h2>
+                        <div class="tt-ppli-categories">
+                          <div class="tt-ppli-category">Healthcare</div>
+                          <div class="tt-ppli-category">Professional</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
+                    >
+                      <div class="tt-ppli-info">
+                        Brand Identity & Stationery Design
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="/work/real-estate" class="tt-ppl-item">
+                <div class="tt-ppli-preview">
+                  <div class="tt-ppli-preview-video">
+                    <video
+                      loop
+                      muted
+                      preload="metadata"
+                      poster="assets/vids/800/video-4-800.jpg"
+                    >
+                      <source
+                        src="assets/vids/placeholder.mp4"
+                        data-src="assets/vids/800/video-4-800.mp4"
+                        type="video/mp4"
+                      />
+                      <source
+                        src="assets/vids/placeholder.webm"
+                        data-src="assets/vids/800/video-4-800.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div class="tt-ppl-item-inner">
+                  <div class="tt-ppl-item-holder">
+                    <div class="tt-ppli-col tt-ppli-col-count">
+                      <div class="tt-ppli-count"></div>
+                    </div>
+                    <div class="tt-ppli-col tt-ppli-col-caption">
+                      <div class="tt-ppli-caption">
+                        <h2 class="tt-ppli-title">Real Estate</h2>
+                        <div class="tt-ppli-categories">
+                          <div class="tt-ppli-category">Real Estate</div>
+                          <div class="tt-ppli-category">Marketing</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
+                    >
+                      <div class="tt-ppli-info">
+                        Campaign Visuals & Ad Creatives
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="/work/wedding-events" class="tt-ppl-item">
+                <div class="tt-ppli-preview">
+                  <div class="tt-ppli-preview-image">
+                    <img
+                      src="assets/img/portfolio/800/portfolio-3.jpg"
+                      alt="Event Branding"
+                    />
+                  </div>
+                </div>
+                <div class="tt-ppl-item-inner">
+                  <div class="tt-ppl-item-holder">
+                    <div class="tt-ppli-col tt-ppli-col-count">
+                      <div class="tt-ppli-count"></div>
+                    </div>
+                    <div class="tt-ppli-col tt-ppli-col-caption">
+                      <div class="tt-ppli-caption">
+                        <h2 class="tt-ppli-title">Wedding Events</h2>
+                        <div class="tt-ppli-categories">
+                          <div class="tt-ppli-category">Events</div>
+                          <div class="tt-ppli-category">Wedding</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
+                    >
+                      <div class="tt-ppli-info">
+                        Event Branding & Promotional Design
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="/work/fmcg-brand" class="tt-ppl-item">
+                <div class="tt-ppli-preview">
+                  <div class="tt-ppli-preview-image">
+                    <img
+                      src="assets/img/portfolio/800/portfolio-4.png"
+                      alt="FMCG Packaging"
+                    />
+                  </div>
+                </div>
+                <div class="tt-ppl-item-inner">
+                  <div class="tt-ppl-item-holder">
+                    <div class="tt-ppli-col tt-ppli-col-count">
+                      <div class="tt-ppli-count"></div>
+                    </div>
+                    <div class="tt-ppli-col tt-ppli-col-caption">
+                      <div class="tt-ppli-caption">
+                        <h2 class="tt-ppli-title">Local FMCG Brand</h2>
+                        <div class="tt-ppli-categories">
+                          <div class="tt-ppli-category">FMCG</div>
+                          <div class="tt-ppli-category">Local Brand</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
+                    >
+                      <div class="tt-ppli-info">
+                        Product Packaging & Label Design
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tt-section no-padding padding-top-xlg-40 padding-bottom-xlg-40"
+      >
+        <div class="tt-section-inner">
+          <div class="tt-scrolling-text-crossed">
+            <div class="tt-scrolling-text-crossed-inner">
+              <div
+                class="tt-scrolling-text scrt-dyn-separator scrt-color-reverse"
+                data-scroll-speed="7"
+                data-change-direction="true"
+                data-opposite-direction="true"
+              >
+                <div class="tt-scrt-inner">
+                  <div class="tt-scrt-content">
+                    5 years of experience • No template work – every design is
+                    custom • Strong understanding of Indian market aesthetics •
+                    Clean, modern, and brand-focused designs
+                    <span class="tt-scrt-separator">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                        >
+                        </path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tt-scrolling-text scrt-dyn-separator"
+                data-scroll-speed="7"
+                data-change-direction="true"
+              >
+                <div class="tt-scrt-inner">
+                  <div class="tt-scrt-content">
+                    Clear communication & on-time delivery • Design that looks
+                    premium without overdoing it • I'm direct, practical, and
+                    focused on output • From brand identities to high-converting
+                    social media creatives
+                    <span class="tt-scrt-separator">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                        >
+                        </path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section no-padding-bottom padding-bottom-xlg-80">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row">
+            <div class="tt-col-xl-8">
+              <div class="tt-heading tt-heading-xxxlg">
+                <h3 class="tt-heading-subtitle tt-text-reveal">My Services</h3>
+                <h2 class="tt-heading-title tt-text-reveal">What I Do</h2>
+              </div>
+              <div
+                class="tt-text-uppercase max-width-400 margin-left-xlg-10-p text-pretty tt-text-reveal"
+              >
+                From brand identities to high-converting social media creatives,
+                I help businesses build a strong, credible, and memorable
+                presence.
+              </div>
+            </div>
+            <div class="tt-col-xl-4 tt-align-self-end margin-top-40">
+              <div
+                class="tt-big-arrow tt-ba-angle-bottom-left tt-anim-fadeinup"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
+                  >
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section">
+        <div class="tt-section-inner">
+          <div
+            class="tt-horizontal-accordion tt-hac-alter-hover tt-anim-fadeinup"
+          >
+            <div class="tt-hac-item cursor-alter">
+              <div class="tt-hac-item-count"></div>
+              <div class="tt-hac-item-inner">
+                <div class="tt-hac-item-content">
+                  <div class="tt-haci-content-top">
+                    <h2 class="tt-haci-title">Graphic<br /> Design</h2>
+                    <div class="tt-haci-description">
+                      Logo Design & Brand Identity<br />
+                      Social Media Post & Ad Creatives<br />
+                      Posters, Flyers & Banners<br />
+                      Visiting Cards & Stationery<br />
+                      Product & Packaging Design
+                    </div>
+                  </div>
+                  <div class="tt-haci-content-bottom">
+                    <a
+                      href="/services"
+                      class="tt-btn tt-btn-outline tt-magnetic-item"
+                    >
+                      <span data-hover="View Work">View Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tt-hac-item cursor-alter">
+              <div class="tt-hac-item-count"></div>
+              <div class="tt-hac-item-inner">
+                <div class="tt-hac-item-content">
+                  <div class="tt-haci-content-top">
+                    <h2 class="tt-haci-title">Digital<br /> Creatives</h2>
+                    <div class="tt-haci-description">
+                      Instagram & Facebook Visual Content<br />
+                      Reel & Post Cover Designs<br />
+                      Promotional Creatives<br />
+                      Campaign Visuals
+                    </div>
+                  </div>
+                  <div class="tt-haci-content-bottom">
+                    <a
+                      href="/services"
+                      class="tt-btn tt-btn-outline tt-magnetic-item"
+                    >
+                      <span data-hover="View Work">View Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tt-hac-item cursor-alter">
+              <div class="tt-hac-item-count"></div>
+              <div class="tt-hac-item-inner">
+                <div class="tt-hac-item-content">
+                  <div class="tt-haci-content-top">
+                    <h2 class="tt-haci-title">Brand<br /> Support</h2>
+                    <div class="tt-haci-description">
+                      Visual Consistency Planning<br />
+                      Design Strategy for Social Media<br />
+                      Creative Direction for Shoots & Campaigns<br />
+                      Long-term brand development
+                    </div>
+                  </div>
+                  <div class="tt-haci-content-bottom">
+                    <a
+                      href="/services"
+                      class="tt-btn tt-btn-outline tt-magnetic-item"
+                    >
+                      <span data-hover="View Work">View Work</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section no-padding-top">
+        <div class="tt-section-inner">
+          <div class="tt-clipper">
+            <a
+              href="https://www.youtube.com/watch?v=6nGs9iGrpok"
+              class="tt-clipper-inner"
+              data-cursor="Play<br>Reel"
+              data-fancybox
+              data-caption="My design portfolio reel. :)"
+            >
+              <div class="tt-clipper-bg">
+                <video
+                  loop
+                  muted
+                  autoplay
+                  playsinline
+                  preload="metadata"
+                  poster="assets/vids/1920/showreel-1920.jpg"
+                >
+                  <source
+                    src="assets/vids/placeholder.mp4"
+                    data-src="assets/vids/1920/showreel-1920.mp4"
+                    type="video/mp4"
+                  />
+                  <source
+                    src="assets/vids/placeholder.webm"
+                    data-src="assets/vids/1920/showreel-1920.webm"
+                    type="video/webm"
+                  />
+                </video>
+              </div>
+              <div class="tt-clipper-content">
+                <div class="tt-clipper-btn">
+                  <i class="fa-solid fa-play"></i>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section border-bottom">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-sticker">
+            <div class="tt-row">
+              <div class="tt-col-lg-4 margin-bottom-40">
+                <div class="tt-sticker-sticky tt-sticky-element">
+                  <div class="tt-heading tt-heading-xxlg">
+                    <h3 class="tt-heading-subtitle tt-text-reveal">
+                      Client Feedback
+                    </h3>
+                    <h2 class="tt-heading-title tt-text-reveal">
+                      What<br /> Clients Say
+                    </h2>
+                    <p class="max-width-500 tt-text-uppercase tt-text-reveal">
+                      I've collaborated with business owners, professionals, and
+                      brands who value clarity, quality, and long-term growth
+                      over quick gimmicks.
+                    </p>
+                  </div>
+                  <a
+                    href="/testimonials"
+                    class="tt-btn tt-btn-outline tt-magnetic-item tt-anim-fadeinup"
+                  >
+                    <span data-hover="Read More">Read More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="tt-col-lg-8">
+                <div class="tt-sticker-scroller">
+                  <div class="tt-sticky-testimonials tt-stte-reversed-colors">
+                    <div class="tt-stte-item">
+                      <div class="tt-stte-card cursor-alter">
+                        <div class="tt-stte-card-counter"></div>
+                        <div class="tt-stte-card-caption">
+                          <div class="tt-stte-text">
+                            "Mayank understands branding better than most
+                            designers I've worked with. His designs are clean,
+                            modern, and actually aligned with business goals,
+                            not just visuals for show."
+                          </div>
+                          <div class="tt-stte-subtext">
+                            <a
+                              href="https:/.net/"
+                              class="tt-link"
+                              target="_blank"
+                              rel="noopener">— Pathyam veda, Agra</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tt-stte-item">
+                      <div class="tt-stte-card cursor-alter">
+                        <div class="tt-stte-card-counter"></div>
+                        <div class="tt-stte-card-caption">
+                          <div class="tt-stte-text">
+                            "What I liked most about working with Mayank was his
+                            clarity. He asks the right questions and delivers
+                            exactly what's needed. No confusion, no unnecessary
+                            revisions."
+                          </div>
+                          <div class="tt-stte-subtext">
+                            — Marketing Consultant
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tt-stte-item">
+                      <div class="tt-stte-card cursor-alter">
+                        <div class="tt-stte-card-counter"></div>
+                        <div class="tt-stte-card-caption">
+                          <div class="tt-stte-text">
+                            "Mayank's social media creatives gave our brand a
+                            professional and consistent look. After the
+                            redesign, our pages looked more credible and premium
+                            instantly."
+                          </div>
+                          <div class="tt-stte-subtext">
+                            <a
+                              href="https:/.net/"
+                              class="tt-link"
+                              target="_blank"
+                              rel="noopener">— Jewellery Brand Owner</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tt-stte-item">
+                      <div class="tt-stte-card cursor-alter">
+                        <div class="tt-stte-card-counter"></div>
+                        <div class="tt-stte-card-caption">
+                          <div class="tt-stte-text">
+                            "He doesn't just design — he thinks. From color
+                            choices to layout, everything had a purpose. If you
+                            want serious design work, Mayank is the right
+                            choice."
+                          </div>
+                          <div class="tt-stte-subtext">
+                            — Healthcare Professional
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tt-stte-item">
+                      <div class="tt-stte-card cursor-alter">
+                        <div class="tt-stte-card-counter"></div>
+                        <div class="tt-stte-card-caption">
+                          <div class="tt-stte-text">
+                            "Fast turnaround, clear communication, and quality
+                            output. Mayank's work helped us present our brand
+                            more confidently in front of clients."
+                          </div>
+                          <div class="tt-stte-subtext">— Startup Founder</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section padding-top-xlg-120 no-padding-bottom">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-heading tt-heading-xxxlg tt-heading-center">
+            <h3 class="tt-heading-subtitle tt-text-reveal">My Philosophy</h3>
+            <h2 class="tt-heading-title tt-text-reveal">Design Principles</h2>
+            <p class="max-width-500 tt-text-uppercase tt-text-reveal">
+              Good design should communicate instantly, build trust visually,
+              support business goals, and stay consistent across platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-avards-list">
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Why Work With Me</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    No template work – every design is custom
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Custom Design</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Market Understanding</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    Strong understanding of Indian market aesthetics
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Local Expertise</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Design Approach</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    Clean, modern, and brand-focused designs
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Modern & Clean</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Communication</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    Clear communication & on-time delivery
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Reliable Service</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Premium Results</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    Design that looks premium without overdoing it
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Premium Quality</div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/services"
+              class="tt-avlist-item cursor-alter tt-anim-fadeinup"
+            >
+              <div class="tt-avlist-item-inner">
+                <div class="tt-avlist-col tt-avlist-col-count">
+                  <div class="tt-avlist-count"></div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-title">
+                  <h4 class="tt-avlist-title">Working Style</h4>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-description">
+                  <div class="tt-avlist-description">
+                    I'm direct, practical, and focused on output
+                  </div>
+                </div>
+                <div class="tt-avlist-col tt-avlist-col-info">
+                  <div class="tt-avlist-info">Practical Approach</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tt-section padding-top-xlg-120 padding-bottom-xlg-120"
+        id="contact"
+      >
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row margin-bottom-40">
+            <div class="tt-col-xl-8">
+              <div class="tt-heading tt-heading-xxxlg no-margin">
+                <h3 class="tt-heading-subtitle tt-text-reveal">Get In Touch</h3>
+                <h2 class="tt-heading-title tt-text-reveal">
+                  Let's Work<br /> Together
+                </h2>
+              </div>
+            </div>
+            <div
+              class="tt-col-xl-4 tt-align-self-end tt-xl-column-reverse margin-top-40"
+            >
+              <div
+                class="max-width-600 margin-bottom-10 tt-text-uppercase text-pretty tt-text-reveal"
+              >
+                If you're serious about your brand image and want designs that
+                actually represent your business, let's connect.
+              </div>
+              <div
+                class="tt-big-round-ptn margin-top-30 margin-bottom-xlg-80 tt-anim-fadeinup"
+              >
+                <a
+                  href="mailto:mayankrajjain.0@gmail.com"
+                  class="tt-big-round-ptn-holder tt-magnetic-item"
+                >
+                  <div class="tt-big-round-ptn-inner">
+                    Start a<br /> Project
+                  </div>
+                </a>
+              </div>
+              <div class="contact-info">
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:mayankrajjain.0@gmail.com"
+                    >mayankrajjain.0@gmail.com</a
+                  >
+                </p>
+                <p>
+                  <strong>Phone / WhatsApp:</strong>
+                  <a href="tel:+918923087566">+91 8923087566</a>
+                </p>
+                <p><strong>Location:</strong> Agra, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

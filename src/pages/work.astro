@@ -1,0 +1,391 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { seoData } from "../data/seoData.js";
+const { meta_title, meta_description, current_page } = seoData.work;
+---
+
+<Layout
+  title={meta_title}
+  description={meta_description}
+  currentPage={current_page}
+>
+  <div id="tt-content-wrap">
+    <div
+      id="page-header"
+      class="ph-full ph-full-m ph-cap-xlg ph-center ph-image-parallax ph-caption-parallax"
+    >
+      <div class="ph-image ph-image-cover-1">
+        <div class="ph-image-inner">
+          <img
+            src="assets/img/portfolio/1920/portfolio-1.jpg"
+            alt="Jewellery Brand Design"
+          />
+        </div>
+      </div>
+
+      <div class="page-header-inner tt-wrap">
+        <div class="ph-caption">
+          <div class="ph-caption-inner">
+            <h1 class="ph-caption-title">Luxe Jewels</h1>
+            <div class="ph-caption-categories">
+              <div class="ph-caption-category">Jewellery</div>
+              <div class="ph-caption-category">Brand Identity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph-share">
+        <div class="ph-share-inner">
+          <div class="ph-share-trigger">
+            <div class="ph-share-text">Share</div>
+            <div class="ph-share-icon"><i class="fas fa-share"></i></div>
+          </div>
+          <div class="ph-share-buttons">
+            <ul>
+              <li>
+                <a href="#" class="tt-magnetic-item" title="Share on Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i></a
+                >
+              </li>
+              <li>
+                <a href="#" class="tt-magnetic-item" title="Share on X"
+                  ><i class="fa-brands fa-x-twitter"></i></a
+                >
+              </li>
+              <li>
+                <a href="#" class="tt-magnetic-item" title="Share on Pinterest"
+                  ><i class="fa-brands fa-pinterest"></i></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-scroll-down">
+        <a
+          href="#tt-page-content"
+          class="tt-scroll-down-inner tt-magnetic-item"
+          data-offset="0"
+        >
+          <div class="tt-scrd-icon"></div>
+          <svg viewBox="0 0 500 500">
+            <defs>
+              <path
+                d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                id="textcircle"></path>
+            </defs>
+            <text dy="30">
+              <textPath xlink:href="#textcircle"
+                >Scroll to Explore - Scroll to Explore -</textPath
+              >
+            </text>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="tt-page-content">
+      <div class="tt-section padding-top-xlg-120 padding-bottom-xlg-120">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row">
+            <div class="tt-col-lg-4 padding-right-md-5-p">
+              <div class="tt-heading tt-heading-xlg margin-bottom-30">
+                <h2 class="tt-heading-title tt-text-reveal">
+                  About the<br /> Project
+                </h2>
+              </div>
+            </div>
+
+            <div class="tt-col-lg-8">
+              <div class="tt-anim-fadeinup">
+                <p>
+                  Luxe Jewels is a premium jewellery brand based in Jaipur,
+                  specializing in traditional and contemporary designs. The
+                  client approached me to create a complete brand identity that
+                  would reflect their heritage while appealing to modern,
+                  sophisticated customers.
+                </p>
+
+                <p>
+                  The challenge was to balance traditional craftsmanship with
+                  modern aesthetics. The brand needed to communicate luxury,
+                  authenticity, and timeless elegance while remaining accessible
+                  to a younger audience interested in heritage jewellery.
+                </p>
+
+                <p>
+                  Every design element was carefully crafted to tell the brand's
+                  story - from the logo inspired by traditional jewellery motifs
+                  to the color palette reflecting precious stones and metals.
+                </p>
+              </div>
+
+              <div
+                class="tt-project-info-list tt-pil-inline tt-anim-fadeinup margin-top-40"
+              >
+                <ul>
+                  <li>
+                    <div class="pi-list-heading">Client</div>
+                    <div class="pi-list-cont">Luxe Jewels</div>
+                  </li>
+                  <li>
+                    <div class="pi-list-heading">Year</div>
+                    <div class="pi-list-cont">2023</div>
+                  </li>
+                  <li>
+                    <div class="pi-list-heading">Services</div>
+                    <div class="pi-list-cont">
+                      Brand Identity, Packaging, Social Media
+                    </div>
+                  </li>
+                  <li>
+                    <div class="pi-list-heading">Location</div>
+                    <div class="pi-list-cont">Jaipur, India</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section no-padding-top">
+        <div class="tt-section-inner">
+          <div class="tt-image tti-full-height">
+            <figure>
+              <img
+                src="assets/img/portfolio/single-project/project-1/1920/project-1-1.jpg"
+                class="tt-image-parallax tt-anim-zoomin"
+                loading="lazy"
+                alt="Luxe Jewels Brand Identity"
+              />
+              <figcaption>
+                Complete brand identity showcasing logo, color palette, and
+                typography
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-row">
+            <div class="tt-col-lg-9">
+              <div class="text-xxlg tt-text-reveal">
+                "The new brand identity helped us increase our premium
+                perception by 40% and social media engagement by 65% within the
+                first quarter."
+              </div>
+            </div>
+
+            <div class="tt-col-lg-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-section">
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-gallery ttga-hover">
+            <div class="tt-grid ttgr-layout-2 ttgr-gap-2">
+              <div class="tt-grid-items-wrap isotope-items-wrap">
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-2.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-2.png"
+                              loading="lazy"
+                              alt="Packaging Design"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-3.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                      data-caption="Jewellery collection catalog design"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-3.png"
+                              loading="lazy"
+                              alt="Catalog Design"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-4.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-4.png"
+                              loading="lazy"
+                              alt="Business Stationery"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-5.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-5.png"
+                              loading="lazy"
+                              alt="Social Media Creatives"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-6.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-6.png"
+                              loading="lazy"
+                              alt="Website Design Mockup"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="tt-grid-item isotope-item">
+                  <div class="ttgr-item-inner">
+                    <a
+                      href="assets/img/portfolio/single-project/project-1/1920/project-1-7.png"
+                      class="tt-gallery-item"
+                      data-cursor="View"
+                      data-fancybox="gallery-459719"
+                    >
+                      <div class="tt-gallery-item-inner">
+                        <div class="tt-gallery-image-wrap tt-anim-zoomin">
+                          <figure class="tt-gallery-image ttgr-height">
+                            <img
+                              src="assets/img/portfolio/single-project/project-1/1200/project-1-7.png"
+                              loading="lazy"
+                              alt="Marketing Collaterals"
+                            />
+                          </figure>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tt-section padding-top-xlg-120 padding-bottom-xlg-140 border-top"
+      >
+        <div class="tt-section-inner tt-wrap">
+          <div class="tt-next-project">
+            <div class="tt-row">
+              <div class="tt-col-md-7">
+                <div class="tt-next-project-caption">
+                  <div class="tt-np-top tt-anim-fadeinup">
+                    <a href="/work" class="tt-btn tt-btn-link">
+                      <span data-hover="All Works">All Works</span>
+                      <span class="tt-btn-icon"
+                        ><i class="fas fa-arrow-right"></i></span
+                      >
+                    </a>
+                  </div>
+                  <h3 class="tt-np-title tt-text-reveal">Next<br /> Project</h3>
+                </div>
+              </div>
+
+              <div class="tt-col-md-5 tt-align-self-center">
+                <div class="tt-next-project-item">
+                  <a
+                    href="/work/healthcare-clinic"
+                    class="tt-npi-image"
+                    data-cursor="View<br>Project"
+                  >
+                    <figure class="tt-npi-image-inner">
+                      <img
+                        src="assets/img/portfolio/800/portfolio-2.png"
+                        class="tt-anim-zoomin"
+                        loading="lazy"
+                        alt="Healthcare Clinic Project"
+                      />
+                    </figure>
+                  </a>
+                  <div class="tt-npi-caption">
+                    <div class="tt-npi-title">
+                      <a href="/work/healthcare-clinic">Healthcare Clinic</a>
+                    </div>
+                    <div class="tt-npi-categories-wrap">
+                      <div class="tt-npi-category">Healthcare</div>
+                      <div class="tt-npi-category">Professional</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

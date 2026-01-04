@@ -1,22 +1,141 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  title?: string;
+  description?: string;
+  currentPage?: string;
+}
+
+const { 
+  title = "Mayank Raj  - Graphic Designer & Visual Brand Strategist",
+  description = "Professional Graphic Designer specializing in branding, digital creatives, and visual storytelling. 5 years of experience.",
+  currentPage = "home"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>{title}</title>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Mayank Raj " />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/assets/img/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/assets/img/og-image.jpg" />
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2SLRW2WLDD"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-2SLRW2WLDD");
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/fancybox/css/fancybox.css" />
+    <link rel="stylesheet" href="/assets/vendor/swiper/css/swiper-bundle.min.css" />
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/assets/css/helper.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" href="/assets/css/theme-light.css" />
+  </head>
+  
+  <body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
+    <main id="body-inner">
+      <!-- Page Transition -->
+      <div id="tt-page-transition">
+        <div class="tt-ptr-overlay-top tt-noise"></div>
+        <div class="tt-ptr-overlay-bottom tt-noise"></div>
+        <div class="tt-ptr-preloader">
+          <div class="tt-ptr-prel-content">
+            <img
+              src="/assets/img/logo-light.png"
+              class="tt-ptr-prel-image"
+              alt="Logo"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <!-- Magic Cursor -->
+      <div id="magic-cursor">
+        <div id="ball"></div>
+      </div>
+      
+      <!-- Header -->
+      <Header currentPage={currentPage} />
+      
+      <!-- Page Content -->
+      <slot />
+      
+      <!-- Footer -->
+      <Footer />
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="tt-scroll-to-top">
+      <div class="tt-stt-progress tt-magnetic-item">
+        <svg
+          class="tt-stt-progress-circle"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+      </div>
+    </a>
+    
+    <!-- Scripts -->
+    <script is:inline src="/assets/vendor/jquery/jquery.min.js"></script>
+    <script is:inline src="/assets/vendor/gsap/gsap.min.js"></script>
+    <script is:inline src="/assets/vendor/gsap/ScrollToPlugin.min.js"></script>
+    <script is:inline src="/assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script is:inline src="/assets/vendor/lenis.min.js"></script>
+    <script is:inline src="/assets/vendor/isotope/imagesloaded.pkgd.min.js"></script>
+    <script is:inline src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script is:inline src="/assets/vendor/isotope/packery-mode.pkgd.min.js"></script>
+    <script is:inline src="/assets/vendor/fancybox/js/fancybox.umd.js"></script>
+    <script is:inline src="/assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+    
+    <!-- Theme JS -->
+    <script is:inline src="/assets/js/theme.js"></script>
+  </body>
+</html>

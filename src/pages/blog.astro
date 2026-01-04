@@ -1,0 +1,369 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { seoData } from "../data/seoData.js";
+const { meta_title, meta_description, current_page } = seoData.blog;
+---
+
+<Layout
+  title={meta_title}
+  description={meta_description}
+  currentPage={current_page}
+>
+  <div id="tt-content-wrap">
+    <div
+      id="page-header"
+      class="ph-cap-xxxxlg ph-center ph-image-parallax ph-caption-parallax"
+    >
+      <div class="page-header-inner tt-wrap">
+        <div class="ph-caption">
+          <div class="ph-caption-inner">
+            <h2 class="ph-caption-subtitle">Insights & Tips</h2>
+            <h1 class="ph-caption-title">Blog</h1>
+            <div class="ph-caption-description max-width-700">
+              Design insights, branding tips, and visual strategy from 5 years
+              of experience
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-header-inner ph-mask">
+        <div class="ph-mask-inner tt-wrap">
+          <div class="ph-caption">
+            <div class="ph-caption-inner">
+              <h2 class="ph-caption-subtitle">Design Insights</h2>
+              <h1 class="ph-caption-title">Articles</h1>
+              <div class="ph-caption-description max-width-700">
+                Professional tips on branding, visual strategy, and design
+                thinking
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ph-social">
+        <ul>
+          <li>
+            <a href="#" class="tt-magnetic-item" target="_blank" rel="noopener"
+              ><i class="fa-brands fa-facebook-f"></i></a
+            >
+          </li>
+          <li>
+            <a href="#" class="tt-magnetic-item" target="_blank" rel="noopener"
+              ><i class="fa-brands fa-dribbble"></i></a
+            >
+          </li>
+          <li>
+            <a href="#" class="tt-magnetic-item" target="_blank" rel="noopener"
+              ><i class="fa-brands fa-behance"></i></a
+            >
+          </li>
+          <li>
+            <a href="#" class="tt-magnetic-item" target="_blank" rel="noopener"
+              ><i class="fa-brands fa-instagram"></i></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="tt-scroll-down">
+        <a
+          href="#tt-page-content"
+          class="tt-scroll-down-inner tt-magnetic-item"
+          data-offset="0"
+        >
+          <div class="tt-scrd-icon"></div>
+          <svg viewBox="0 0 500 500">
+            <defs>
+              <path
+                d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                id="textcircle"></path>
+            </defs>
+            <text dy="30">
+              <textPath xlink:href="#textcircle"
+                >Scroll to Explore - Scroll to Explore -</textPath
+              >
+            </text>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="tt-page-content">
+      <div class="tt-section padding-bottom-xlg-120">
+        <div class="tt-section-inner tt-wrap max-width-1000">
+          <div id="blog-list" class="bli-image-cropped">
+            <article class="blog-list-item">
+              <a
+                href="/blog/essential-brand-identity-elements"
+                class="bli-image-wrap"
+                data-cursor="Read<br>More"
+              >
+                <figure class="bli-image tt-anim-zoomin">
+                  <img
+                    src="assets/img/blog/1200/blog-1-1200.jpg"
+                    loading="lazy"
+                    alt="Brand Identity Design"
+                  />
+                </figure>
+              </a>
+              <div class="bli-info">
+                <div class="bli-categories">
+                  <a href="/blog/category/branding">Branding</a>
+                  <a href="/blog/category/design-tips">Design Tips</a>
+                </div>
+                <h2 class="bli-title">
+                  <a href="/blog/essential-brand-identity-elements"
+                    >5 Essential Elements Every Brand Identity Needs in 2024</a
+                  >
+                </h2>
+                <div class="bli-meta">
+                  <span class="published">March 15, 2024</span>
+                  <span class="posted-by"
+                    >- by <a
+                      href="/blog/author/mayank"
+                      title="View all posts by Mayank Raj"
+                      >Mayank Raj</a
+                    ></span
+                  >
+                </div>
+                <div class="bli-desc">
+                  A strong brand identity is more than just a logo. Based on my
+                  5 years of experience working with Indian businesses, I'll
+                  share the essential elements that make a brand identity truly
+                  effective and memorable in today's competitive market...
+                </div>
+                <a
+                  href="/blog/essential-brand-identity-elements"
+                  class="tt-btn tt-btn-primary"
+                >
+                  <span data-hover="Read More">Read More</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-list-item">
+              <a
+                href="/blog/high-converting-social-media-creatives"
+                class="bli-image-wrap"
+                data-cursor="Read<br>More"
+              >
+                <figure class="bli-image tt-anim-zoomin">
+                  <img
+                    src="assets/img/blog/1200/blog-2-1200.jpg"
+                    loading="lazy"
+                    alt="Social Media Design"
+                  />
+                </figure>
+              </a>
+              <div class="bli-info">
+                <div class="bli-categories">
+                  <a href="/blog/category/social-media">Social Media</a>
+                  <a href="/blog/category/digital-creatives"
+                    >Digital Creatives</a
+                  >
+                </div>
+                <h2 class="bli-title">
+                  <a href="/blog/high-converting-social-media-creatives"
+                    >Creating High-Converting Social Media Creatives for Indian
+                    Audiences</a
+                  >
+                </h2>
+                <div class="bli-meta">
+                  <span class="published">March 10, 2024</span>
+                  <span class="posted-by"
+                    >- by <a
+                      href="/blog/author/mayank"
+                      title="View all posts by Mayank Raj"
+                      >Mayank Raj</a
+                    ></span
+                  >
+                </div>
+                <div class="bli-desc">
+                  Learn how to design social media creatives that don't just
+                  look good—they actually convert. I'll share practical tips on
+                  understanding Indian market aesthetics and creating visuals
+                  that build trust and drive engagement...
+                </div>
+                <a
+                  href="/blog/high-converting-social-media-creatives"
+                  class="tt-btn tt-btn-primary"
+                >
+                  <span data-hover="Read More">Read More</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-list-item">
+              <a
+                href="/blog/design-process-guide"
+                class="bli-image-wrap"
+                data-cursor="Read<br>More"
+              >
+                <figure class="bli-image tt-anim-zoomin">
+                  <img
+                    src="assets/img/blog/1200/blog-3-1200.jpg"
+                    loading="lazy"
+                    alt="Design Process"
+                  />
+                </figure>
+              </a>
+              <div class="bli-info">
+                <div class="bli-categories">
+                  <a href="/blog/category/process">Process</a>
+                  <a href="/blog/category/business">Business</a>
+                </div>
+                <h2 class="bli-title">
+                  <a href="/blog/design-process-guide"
+                    >My Design Process: From Concept to Final Delivery</a
+                  >
+                </h2>
+                <div class="bli-meta">
+                  <span class="published">March 5, 2024</span>
+                  <span class="posted-by"
+                    >- by <a
+                      href="/blog/author/mayank"
+                      title="View all posts by Mayank Raj"
+                      >Mayank Raj</a
+                    ></span
+                  >
+                </div>
+                <div class="bli-desc">
+                  Ever wondered how a professional designer works? I'm sharing
+                  my complete design process—from asking the right questions to
+                  delivering exactly what's needed. No confusion, no unnecessary
+                  revisions, just clear communication...
+                </div>
+                <a
+                  href="/blog/design-process-guide"
+                  class="tt-btn tt-btn-primary"
+                >
+                  <span data-hover="Read More">Read More</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-list-item">
+              <a
+                href="/blog/color-psychology-indian-branding"
+                class="bli-image-wrap"
+                data-cursor="Read<br>More"
+              >
+                <figure class="bli-image tt-anim-zoomin">
+                  <img
+                    src="assets/img/blog/1200/blog-4-1200.jpg"
+                    loading="lazy"
+                    alt="Color Psychology"
+                  />
+                </figure>
+              </a>
+              <div class="bli-info">
+                <div class="bli-categories">
+                  <a href="/blog/category/design-theory">Design Theory</a>
+                  <a href="/blog/category/visual-strategy">Visual Strategy</a>
+                </div>
+                <h2 class="bli-title">
+                  <a href="/blog/color-psychology-indian-branding"
+                    >Color Psychology in Indian Branding: What Works and Why</a
+                  >
+                </h2>
+                <div class="bli-meta">
+                  <span class="published">February 28, 2024</span>
+                  <span class="posted-by"
+                    >- by <a
+                      href="/blog/author/mayank"
+                      title="View all posts by Mayank Raj"
+                      >Mayank Raj</a
+                    ></span
+                  >
+                </div>
+                <div class="bli-desc">
+                  Colors aren't just decorative—they communicate. Learn how to
+                  choose colors that build trust, support business goals, and
+                  resonate with Indian audiences. Every color choice should have
+                  a purpose in your branding...
+                </div>
+                <a
+                  href="/blog/color-psychology-indian-branding"
+                  class="tt-btn tt-btn-primary"
+                >
+                  <span data-hover="Read More">Read More</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-list-item">
+              <a
+                href="/blog/product-packaging-design-guide"
+                class="bli-image-wrap"
+                data-cursor="Read<br>More"
+              >
+                <figure class="bli-image tt-anim-zoomin">
+                  <img
+                    src="assets/img/blog/1200/blog-5-1200.jpg"
+                    loading="lazy"
+                    alt="Packaging Design"
+                  />
+                </figure>
+              </a>
+              <div class="bli-info">
+                <div class="bli-categories">
+                  <a href="/blog/category/packaging">Packaging</a>
+                  <a href="/blog/category/fmcg">FMCG</a>
+                </div>
+                <h2 class="bli-title">
+                  <a href="/blog/product-packaging-design-guide"
+                    >Product Packaging Design for Local Indian Brands: A
+                    Practical Guide</a
+                  >
+                </h2>
+                <div class="bli-meta">
+                  <span class="published">February 22, 2024</span>
+                  <span class="posted-by"
+                    >- by <a
+                      href="/blog/author/mayank"
+                      title="View all posts by Mayank Raj"
+                      >Mayank Raj</a
+                    ></span
+                  >
+                </div>
+                <div class="bli-desc">
+                  Packaging is your product's first physical interaction with
+                  customers. I'll share insights from working with FMCG and
+                  local brands on creating packaging that looks premium without
+                  overdoing it and actually sells...
+                </div>
+                <a
+                  href="/blog/product-packaging-design-guide"
+                  class="tt-btn tt-btn-primary"
+                >
+                  <span data-hover="Read More">Read More</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="tt-pagination">
+            <div class="tt-pagin-prev">
+              <a href="#" class="tt-pagin-item tt-magnetic-item"
+                ><i class="fas fa-arrow-left"></i></a
+              >
+            </div>
+            <div class="tt-pagin-numbers">
+              <a href="#" class="tt-pagin-item tt-magnetic-item active">1</a>
+              <a href="#" class="tt-pagin-item tt-magnetic-item">2</a>
+              <a href="#" class="tt-pagin-item tt-magnetic-item">3</a>
+              <a href="#" class="tt-pagin-item tt-magnetic-item">4</a>
+            </div>
+            <div class="tt-pagin-next">
+              <a href="#" class="tt-pagin-item tt-pagin-next tt-magnetic-item"
+                ><i class="fas fa-arrow-right"></i></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
