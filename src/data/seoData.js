@@ -12,37 +12,31 @@ export const seoData = {
     current_page: 'about'
   },
   
-  work: {
-    meta_title: "My Work - Portfolio | Mayank Raj",
-    meta_description: "A curated collection of branding, social media creatives, and promotional designs created for different industries.",
-    current_page: 'work'
-  },
-  
   projects: {
     jewellery: {
       meta_title: "Jewellery Brand Design Project | Mayank Raj",
       meta_description: "Complete brand identity and social media design for a jewellery brand.",
-      current_page: 'work'
+      current_page: 'projects'
     },
     healthcare: {
       meta_title: "Healthcare Clinic Branding Project | Mayank Raj",
       meta_description: "Brand identity and stationery design for a healthcare clinic.",
-      current_page: 'work'
+      current_page: 'projects'
     },
     realEstate: {
       meta_title: "Real Estate Marketing Design Project | Mayank Raj",
       meta_description: "Campaign visuals and ad creatives for real estate marketing.",
-      current_page: 'work'
+      current_page: 'projects'
     },
     wedding: {
       meta_title: "Wedding Events Branding Project | Mayank Raj",
       meta_description: "Event branding and promotional design for wedding events.",
-      current_page: 'work'
+      current_page: 'projects'
     },
     fmcg: {
       meta_title: "FMCG Packaging Design Project | Mayank Raj",
       meta_description: "Product packaging and label design for a local FMCG brand.",
-      current_page: 'work'
+      current_page: 'projects'
     }
   },
   

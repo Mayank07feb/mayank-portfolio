@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { seoData } from "../data/seoData.js";
+import ProjectsList from "../components/ProjectsList.jsx";
+
+export const prerender = false;
 
 const { meta_title, meta_description, current_page } = seoData.home;
+
+const response = await fetch(`${Astro.url.origin}/api/projects.json`);
+const projects = await response.json();
+
+
 ---
 
 <Layout
@@ -184,7 +192,7 @@ const { meta_title, meta_description, current_page } = seoData.home;
                 properly, not random templates — you're in the right place.
               </div>
               <a
-                href="/about"
+                href="/about/"
                 class="tt-btn tt-btn-outline margin-top-40 tt-magnetic-item tt-anim-fadeinup"
               >
                 <span data-hover="Read More">Read More</span>
@@ -214,7 +222,7 @@ const { meta_title, meta_description, current_page } = seoData.home;
             <div class="tt-col-xl-4 tt-align-self-end margin-top-30">
               <div class="tt-big-round-ptn tt-anim-fadeinup">
                 <a
-                  href="/project"
+                  href="#"
                   class="tt-big-round-ptn-holder tt-magnetic-item"
                 >
                   <div class="tt-big-round-ptn-inner">All<br /> Projects</div>
@@ -225,221 +233,8 @@ const { meta_title, meta_description, current_page } = seoData.home;
         </div>
       </div>
 
-      <div
-        class="tt-section no-padding-top padding-top-xlg-80 padding-bottom-20 padding-bottom-xlg-80"
-      >
-        <div class="tt-section-inner">
-          <div class="tt-portfolio-preview-list tt-ppli-portrait tt-ppli-hover">
-            <div class="tt-ppl-items-list">
-              <!-- Fashion -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/fashion.png"
-                      alt="Fashion Brand Design"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Fashion</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">Fashion</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Brand Identity & Social Media Design
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+     <ProjectsList projects={projects} />
 
-              <!-- Healthcare -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/healthcare.png"
-                      alt="Healthcare Branding"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Healthcare</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">Healthcare</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Brand Identity & Stationery Design
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Automobiles -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/automobile.png"
-                      alt="Automobiles Branding"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Automobiles</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">Automobiles</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Marketing Campaigns & Visual Creatives
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Events -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/events.png"
-                      alt="Event Branding"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Events</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">Events</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Event Branding & Promotional Design
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Hospitality & Food -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/hospitality-food.png"
-                      alt="Hospitality & Food Branding"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Hospitality &amp; Food</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">
-                            Hospitality &amp; Food
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Packaging & Brand Visual Design
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Fitness -->
-              <a href="/project" class="tt-ppl-item">
-                <div class="tt-ppli-preview">
-                  <div class="tt-ppli-preview-image">
-                    <img
-                      src="assets/img/portfolio/800/fitness.png"
-                      alt="Fitness Branding"
-                    />
-                  </div>
-                </div>
-                <div class="tt-ppl-item-inner">
-                  <div class="tt-ppl-item-holder">
-                    <div class="tt-ppli-col tt-ppli-col-count">
-                      <div class="tt-ppli-count"></div>
-                    </div>
-                    <div class="tt-ppli-col tt-ppli-col-caption">
-                      <div class="tt-ppli-caption">
-                        <h2 class="tt-ppli-title">Fitness</h2>
-                        <div class="tt-ppli-categories">
-                          <div class="tt-ppli-category">Fitness</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="tt-ppli-col tt-ppli-col-info tt-justify-content-md-end"
-                    >
-                      <div class="tt-ppli-info">
-                        Brand Identity & Social Media Design
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div
         class="tt-section no-padding padding-top-xlg-40 padding-bottom-xlg-40"

@@ -9,6 +9,7 @@ const { currentPage = 'home' } = Astro.props;
 
 <header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
   <div class="tt-header-inner tt-noise">
+
     <!-- Logo -->
     <div class="tt-header-col tt-header-col-left">
       <div class="tt-logo">
@@ -26,24 +27,33 @@ const { currentPage = 'home' } = Astro.props;
           <div class="tt-main-menu-inner">
             <div class="tt-main-menu-content">
               <ul class="tt-main-menu-list">
+
                 <li class={currentPage === 'home' ? 'active' : ''}>
                   <a href="/">Home</a>
                 </li>
-                <!-- <li class={currentPage === 'work' ? 'active' : ''}>
-                  <a href="/work">Work</a>
-                </li> -->
+
+                <!--
+                <li class={currentPage === 'work' ? 'active' : ''}>
+                  <a href="/work/">Work</a>
+                </li>
+                -->
+
                 <li class={currentPage === 'about' ? 'active' : ''}>
-                  <a href="/about">About</a>
+                  <a href="/about/">About</a>
                 </li>
+
                 <li class={currentPage === 'services' ? 'active' : ''}>
-                  <a href="/services">Services</a>
+                  <a href="/services/">Services</a>
                 </li>
-                <li class={currentPage === 'blog' ? 'active' : ''}>
-                  <a href="/blog">Blog</a>
-                </li>
+
+                <!-- <li class={currentPage === 'blog' ? 'active' : ''}>
+                  <a href="/blog/">Blog</a>
+                </li> -->
+
                 <li class={currentPage === 'contact' ? 'active' : ''}>
-                  <a href="/contact">Contact</a>
+                  <a href="/contact/">Contact</a>
                 </li>
+
               </ul>
             </div>
           </div>
@@ -53,6 +63,7 @@ const { currentPage = 'home' } = Astro.props;
 
     <!-- Right Side -->
     <div class="tt-header-col tt-header-col-right">
+
       <!-- Mobile Menu Toggle -->
       <div id="tt-m-menu-toggle-btn-wrap">
         <div class="tt-m-menu-toggle-btn-text">
@@ -65,7 +76,7 @@ const { currentPage = 'home' } = Astro.props;
       </div>
 
       <!-- Contact Button -->
-      <a href="/contact" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item">
+      <a href="/contact/" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item">
         <span data-hover="Contact">Contact</span>
       </a>
 
@@ -80,6 +91,7 @@ const { currentPage = 'home' } = Astro.props;
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </header>

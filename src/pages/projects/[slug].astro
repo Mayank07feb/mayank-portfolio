@@ -1,0 +1,34 @@
+---
+// src/pages/projects/[slug].astro
+import Layout from "../../layouts/Layout.astro";
+import ProjectDetail from "../../components/ProjectDetails";
+
+export const prerender = false;
+
+// Get slug from URL
+const { slug } = Astro.params;
+
+// Fetch project data from API
+const response = await fetch(`${Astro.url.origin}/api/projects-details.json`);
+const projectsData = await response.json();
+
+// Find project by slug
+const project = projectsData.find(p => p.slug === slug);
+
+if (!project) {
+  // Redirect to 404 page if project not found
+  return Astro.redirect('/404');
+}
+
+// Generate dynamic SEO data
+const pageTitle = `${project.title} - ${project.category} | Mayank Raj Portfolio`;
+const pageDescription = project.description;
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  currentPage="projects"
+>
+  <ProjectDetail project={project} client:load />
+</Layout>
