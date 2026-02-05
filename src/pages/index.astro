@@ -2,15 +2,37 @@
 import Layout from "../layouts/Layout.astro";
 import { seoData } from "../data/seoData.js";
 import ProjectsList from "../components/ProjectsList.jsx";
+import { API_BASE_URL } from "../config/api";
 
 export const prerender = false;
 
 const { meta_title, meta_description, current_page } = seoData.home;
 
-const response = await fetch(`${Astro.url.origin}/api/projects.json`);
-const projects = await response.json();
+// Fetch categories with their projects from real API
+const response = await fetch(
+  `${API_BASE_URL}/api/categories/project-categories`,
+  { cache: "no-store" }
+);
 
+if (!response.ok) {
+  throw new Error("Failed to fetch project categories");
+}
 
+const data = await response.json();
+
+// Transform categories data into projects array for the component
+const projects = data.success && data.categories ? 
+  data.categories.map(category => ({
+    id: category.id,
+    slug: category.slug,
+    title: category.name,
+    category: category.name,
+    description: category.description,
+    image: `${API_BASE_URL}${category.media?.path || '/placeholder.jpg'}`,
+    alt: category.name,
+    meta_title: category.meta_title,
+    meta_description: category.meta_description
+  })) : [];
 ---
 
 <Layout
@@ -104,43 +126,6 @@ const projects = await response.json();
         </div>
       </div>
 
-      <!-- <div class="ph-social">
-        <ul>
-          <li>
-            <a
-              href="https://www.facebook.com"
-              class="tt-magnetic-item"
-              target="_blank"
-              rel="noopener"><i class="fa-brands fa-facebook-f"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://dribbble.com"
-              class="tt-magnetic-item"
-              target="_blank"
-              rel="noopener"><i class="fa-brands fa-dribbble"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.behance.net"
-              class="tt-magnetic-item"
-              target="_blank"
-              rel="noopener"><i class="fa-brands fa-behance"></i></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/"
-              class="tt-magnetic-item"
-              target="_blank"
-              rel="noopener"><i class="fa-brands fa-youtube"></i></a
-            >
-          </li>
-        </ul>
-      </div> -->
-
       <div class="tt-scroll-down">
         <a
           href="#tt-page-content"
@@ -222,7 +207,7 @@ const projects = await response.json();
             <div class="tt-col-xl-4 tt-align-self-end margin-top-30">
               <div class="tt-big-round-ptn tt-anim-fadeinup">
                 <a
-                  href="#"
+                  href="/projects"
                   class="tt-big-round-ptn-holder tt-magnetic-item"
                 >
                   <div class="tt-big-round-ptn-inner">All<br /> Projects</div>

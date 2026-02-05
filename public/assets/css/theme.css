@@ -856,6 +856,10 @@ h6.tt-text-uppercase {
 	}
 }
 
+.tt-heading.tt-heading-center {
+  margin-bottom: 10px;
+}
+
 
 /* ----------------------------------------------------------------------------------------- *
  * Page boxed layout
@@ -5916,24 +5920,55 @@ body:not(.is-mobile) .ttgr-cat-close-btn {
 	padding-bottom: 140%;
 }
 
+/* =====================================
+   tt-Grid layouts
+   FIXED – NO IMAGE CUTTING
+===================================== */
 
-/* tt-Grid layouts 
-=================== */
-/* layout-2 */
+/* layout-2 grid width */
 @media (min-width: 768px) {
-	.tt-grid.ttgr-layout-2 .tt-grid-item {
-		width: 50%;
-	}
-}
-.tt-grid.ttgr-layout-2 .ttgr-height {
-	padding-bottom: 65%;
+  .tt-grid.ttgr-layout-2 .tt-grid-item {
+    width: 50%;
+  }
 }
 
+/* REMOVE forced aspect ratio */
+.tt-grid.ttgr-layout-2 .ttgr-height {
+  padding-bottom: 0 !important;
+  height: auto !important;
+}
+
+/* REMOVE portrait overrides */
 .tt-grid.ttgr-layout-2.ttgr-portrait .ttgr-height,
 .tt-grid.ttgr-layout-2.ttgr-portrait-half .tt-grid-item:nth-child(4n+3) .ttgr-height,
 .tt-grid.ttgr-layout-2.ttgr-portrait-half .tt-grid-item:nth-child(4n+4) .ttgr-height {
-	padding-bottom: 140%;
+  padding-bottom: 0 !important;
 }
+
+/* ================================
+   Image handling – FULL VISIBILITY
+================================ */
+
+/* image wrapper */
+.tt-gallery-image-wrap {
+  overflow: visible !important;
+}
+
+/* image container */
+.tt-gallery-image {
+  position: relative !important;
+  height: auto !important;
+}
+
+/* image itself */
+.tt-gallery-image img {
+  position: relative !important;
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+}
+
 
 /* layout-3 */
 @media (min-width: 768px) {

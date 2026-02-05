@@ -1,28 +1,82 @@
 ---
-// src/pages/projects/[slug].astro
 import Layout from "../../layouts/Layout.astro";
 import ProjectDetail from "../../components/ProjectDetails";
+import { API_BASE_URL } from "../../config/api";
 
 export const prerender = false;
 
-// Get slug from URL
 const { slug } = Astro.params;
 
-// Fetch project data from API
-const response = await fetch(`${Astro.url.origin}/api/projects-details.json`);
-const projectsData = await response.json();
+const res = await fetch(
+  `${API_BASE_URL}/api/categories/project-categories/${slug}`,
+  { cache: "no-store" }
+);
 
-// Find project by slug
-const project = projectsData.find(p => p.slug === slug);
+if (!res.ok) return Astro.redirect("/404");
 
-if (!project) {
-  // Redirect to 404 page if project not found
-  return Astro.redirect('/404');
+const data = await res.json();
+
+if (!data.success || !data.category) {
+  return Astro.redirect("/404");
 }
 
-// Generate dynamic SEO data
-const pageTitle = `${project.title} - ${project.category} | Mayank Raj Portfolio`;
-const pageDescription = project.description;
+// ✅ PURE API → UI MAPPING (NO STATIC DATA)
+const project = {
+  id: data.category.id,
+  title: data.category.name,
+  slug: data.category.slug,
+  category: data.category.name,
+  description: data.category.description || null,
+
+  meta_title: data.category.meta_title || null,
+  meta_description: data.category.meta_description || null,
+
+  hero: {
+    image: data.category.media?.path
+      ? `${API_BASE_URL}${data.category.media.path}`
+      : null,
+    alt: data.category.name || null,
+  },
+
+  categories: data.category.name ? [data.category.name] : [],
+
+  story: [
+    ...(data.category.description ? [data.category.description] : []),
+    ...(data.projects?.map(p => p.description).filter(Boolean) || []),
+  ],
+
+  details: {
+    client: data.projects?.[0]?.name || null,
+    year: data.projects?.[0]?.created_at_utc
+      ? new Date(data.projects[0].created_at_utc).getFullYear()
+      : null,
+    services: data.projects?.[0]?.role || null,
+    location: null, // ❌ removed static "India"
+  },
+
+  quote: null,
+
+  // ✅ GALLERY: ONLY API MEDIA
+  gallery: [
+    ...new Map(
+      (data.projects || []).flatMap(p =>
+        (p.media || []).map(m => [
+          `${API_BASE_URL}${m.path}`,
+          {
+            image: `${API_BASE_URL}${m.path}`,
+            largeImage: `${API_BASE_URL}${m.path}`,
+            alt: p.name || null,
+            caption: p.name || null,
+          }
+        ])
+      )
+    ).values()
+  ],
+};
+
+// ✅ SEO ONLY FROM API
+const pageTitle = project.meta_title;
+const pageDescription = project.meta_description;
 ---
 
 <Layout
