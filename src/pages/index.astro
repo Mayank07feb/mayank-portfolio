@@ -28,7 +28,8 @@ const projects = data.success && data.categories ?
     title: category.name,
     category: category.name,
     description: category.description,
-    image: `${API_BASE_URL}${category.media?.path || '/placeholder.jpg'}`,
+    // Use thumbnail_url for the list view
+    image: category.media?.thumbnail_url || category.media?.media_name || '/placeholder.jpg',
     alt: category.name,
     meta_title: category.meta_title,
     meta_description: category.meta_description

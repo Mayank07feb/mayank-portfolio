@@ -32,9 +32,8 @@ const project = {
   meta_description: data.category.meta_description || null,
 
   hero: {
-    image: data.category.media?.path
-      ? `${API_BASE_URL}${data.category.media.path}`
-      : null,
+    // Use thumbnail_url for hero image
+    image: data.category.media?.thumbnail_url || data.category.media?.media_name || '/placeholder.jpg',
     alt: data.category.name || null,
   },
 
@@ -51,21 +50,21 @@ const project = {
       ? new Date(data.projects[0].created_at_utc).getFullYear()
       : null,
     services: data.projects?.[0]?.role || null,
-    location: null, // ❌ removed static "India"
+    location: null,
   },
 
   quote: null,
 
-  // ✅ GALLERY: ONLY API MEDIA
+  // ✅ GALLERY: Use media_url for gallery images (no base path)
   gallery: [
     ...new Map(
       (data.projects || []).flatMap(p =>
         (p.media || []).map(m => [
-          `${API_BASE_URL}${m.path}`,
+          m.media_url,
           {
-            image: `${API_BASE_URL}${m.path}`,
-            largeImage: `${API_BASE_URL}${m.path}`,
-            alt: p.name || null,
+            image: m.media_url,
+            largeImage: m.media_url,
+            alt: p.name || m.media_name || null,
             caption: p.name || null,
           }
         ])
