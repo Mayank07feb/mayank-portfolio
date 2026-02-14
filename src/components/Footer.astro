@@ -1,6 +1,7 @@
 ---
 // Footer component
 const currentYear = new Date().getFullYear();
+const siteName = "Mayank Raj"; 
 ---
 
 <footer id="tt-footer" class="border-top">
@@ -35,9 +36,7 @@ const currentYear = new Date().getFullYear();
           <ul class="tt-footer-widget-list">
             <li><a href="/" class="tt-link">Home</a></li>
             <li><a href="/about/" class="tt-link">About Me</a></li>
-            <!-- <li><a href="/project/" class="tt-link">My Work</a></li> -->
             <li><a href="/services/" class="tt-link">Services</a></li>
-            <!-- <li><a href="/blog/" class="tt-link">Blog</a></li> -->
             <li><a href="/contact/" class="tt-link">Contact</a></li>
           </ul>
         </div>
@@ -83,22 +82,28 @@ const currentYear = new Date().getFullYear();
                     src="/assets/img/logo-light.png"
                     class="tt-logo-light"
                     loading="lazy"
-                    alt="Mayank Raj Logo"
+                    alt={`${siteName} Logo`}
                   />
                   <img
                     src="/assets/img/logo-dark.png"
                     class="tt-logo-dark"
                     loading="lazy"
-                    alt="Mayank Raj Logo"
+                    alt={`${siteName} Logo`}
                   />
                 </a>
               </div>
             </li>
             <li>
               <div class="tt-footer-copyright">
-                © <span class="tt-copyright-year">{currentYear}</span> Mayank Raj<br />
-                Graphic Designer & Visual Brand Strategist<br />
-                Designed & Built with Purpose
+                © {currentYear} {siteName} | 
+                <a 
+                  href="https://www.developersstreet.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="tt-link"
+                >
+                  Design and Developed by Developers Street
+                </a>
               </div>
             </li>
           </ul>
